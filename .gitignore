@@ -1,0 +1,5 @@
+# Godot 4+ specific ignores
+.godot/
+
+# Documentation assets (README screenshots are not part of the game)
+/docs/*.import

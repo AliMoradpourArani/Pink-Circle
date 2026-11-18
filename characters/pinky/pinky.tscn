@@ -1,0 +1,316 @@
+[gd_scene load_steps=10 format=3 uid="uid://byeekjrlbr0ji"]
+
+[ext_resource type="Texture2D" uid="uid://dj02nkmjvhdc8" path="res://characters/pinky/legPlayer.svg" id="1_34bkq"]
+[ext_resource type="Script" path="res://characters/pinky/pinky.gd" id="1_ls0cl"]
+[ext_resource type="Texture2D" uid="uid://btip2rwo8jc7h" path="res://characters/pinky/footPlayer.svg" id="2_xdfhg"]
+[ext_resource type="Texture2D" uid="uid://c668so2kg3823" path="res://characters/pinky/bodyPlayer.svg" id="3_rtmbi"]
+[ext_resource type="Texture2D" uid="uid://cuwbn55o6u6gt" path="res://characters/pinky/facePlayer.svg" id="4_1xs2m"]
+
+[sub_resource type="Animation" id="Animation_j5i4k"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pinky body/left leg:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-70, 170)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pinky body/left leg:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.546984]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pinky body/right leg:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(55, 170)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pinky body/right leg:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pinky body/body:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 17.358)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pinky body/body:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pinky body/left leg/left foot:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.539418]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Pinky body/right leg/right foot:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_3oimu"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pinky body/body:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 1),
+"transitions": PackedFloat32Array(2.46229, 0.366022, 1.23114),
+"update": 0,
+"values": [-0.0872665, 0.174533, -0.0872665]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pinky body/body:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 1),
+"transitions": PackedFloat32Array(0.307786, 0.125, 0.965936),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 20), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pinky body/right leg:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(55, 170)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pinky body/right leg:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pinky body/left leg:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-70, 170)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pinky body/left leg:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.541052]
+}
+
+[sub_resource type="Animation" id="Animation_gfbrc"]
+resource_name = "walk"
+length = 0.6
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pinky body/body:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45),
+"transitions": PackedFloat32Array(0.353554, 2.21914, 0.378929, 2.21914),
+"update": 0,
+"values": [0.0, -0.20944, 0.0349066, 0.20944]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pinky body/right leg:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(0.378929, 2.46229, 1),
+"update": 0,
+"values": [0.0, 0.523599, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pinky body/right leg:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(0.392292, 2.54912, 1),
+"update": 0,
+"values": [Vector2(55, 170), Vector2(80, 140), Vector2(55, 170)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pinky body/right leg/right foot:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(0.378929, 2.54912, 1),
+"update": 0,
+"values": [0.0, -0.349066, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pinky body/left leg:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.45),
+"transitions": PackedFloat32Array(1, 0.277392, 2.73208),
+"update": 0,
+"values": [0.546984, 0.546984, -0.174533]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pinky body/left leg:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.45),
+"transitions": PackedFloat32Array(1, 0.31864, 2.46229),
+"update": 0,
+"values": [Vector2(-70, 170), Vector2(-70, 170), Vector2(-95, 150)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pinky body/left leg/left foot:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.45),
+"transitions": PackedFloat32Array(1, 0.277392, 2.82843),
+"update": 0,
+"values": [-0.539418, -0.539418, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f6cwj"]
+_data = {
+"RESET": SubResource("Animation_j5i4k"),
+"idle": SubResource("Animation_3oimu"),
+"walk": SubResource("Animation_gfbrc")
+}
+
+[node name="Pinky" type="Node2D"]
+script = ExtResource("1_ls0cl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_f6cwj")
+}
+
+[node name="Pinky body" type="Node2D" parent="."]
+scale = Vector2(0.2, 0.2)
+
+[node name="left leg" type="Sprite2D" parent="Pinky body"]
+position = Vector2(-70, 170)
+rotation = 0.546984
+texture = ExtResource("1_34bkq")
+
+[node name="left foot" type="Sprite2D" parent="Pinky body/left leg"]
+position = Vector2(5.77524, 96.0034)
+rotation = -0.539418
+texture = ExtResource("2_xdfhg")
+
+[node name="right leg" type="Sprite2D" parent="Pinky body"]
+position = Vector2(55, 170)
+texture = ExtResource("1_34bkq")
+
+[node name="right foot" type="Sprite2D" parent="Pinky body/right leg"]
+position = Vector2(50, 85)
+texture = ExtResource("2_xdfhg")
+
+[node name="body" type="Sprite2D" parent="Pinky body"]
+position = Vector2(0, 17.358)
+texture = ExtResource("3_rtmbi")
+
+[node name="face" type="Sprite2D" parent="Pinky body/body"]
+texture = ExtResource("4_1xs2m")

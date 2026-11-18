@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://ije2jqw7wwmi"]
+
+[ext_resource type="Script" uid="uid://cpxnwelfp2xcb" path="res://scenes/gun.gd" id="1_7srvn"]
+[ext_resource type="Texture2D" uid="uid://on6j0vrtp7im" path="res://objects/gun/SVG/gun.svg" id="1_k6sen"]
+[ext_resource type="Texture2D" uid="uid://co6mx6mapfhvg" path="res://objects/gun/range_c.svg" id="2_y0hk3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mhf4q"]
+radius = 190.0
+
+[node name="Gun" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_7srvn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+shape = SubResource("CircleShape2D_mhf4q")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+scale = Vector2(0.527778, 0.527778)
+texture = ExtResource("2_y0hk3")
+
+[node name="GunPoint" type="Marker2D" parent="."]
+
+[node name="GunShape" type="Sprite2D" parent="GunPoint"]
+position = Vector2(80, 0)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_k6sen")
+
+[node name="BulletPoint" type="Marker2D" parent="GunPoint/GunShape"]
+unique_name_in_owner = true
+position = Vector2(240, 0)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

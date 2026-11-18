@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bj0ox11756bth"]
+
+[ext_resource type="PackedScene" uid="uid://cb5ddauqfuayj" path="res://characters/jelly/jelly.tscn" id="1_784le"]
+[ext_resource type="Script" uid="uid://bet4c5csgur5a" path="res://scenes/mob.gd" id="1_u1250"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2rhyi"]
+radius = 33.75
+
+[node name="Mob" type="CharacterBody2D"]
+position = Vector2(0, -26)
+scale = Vector2(0.8, 0.8)
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_u1250")
+
+[node name="Jelly" parent="." instance=ExtResource("1_784le")]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2rhyi")

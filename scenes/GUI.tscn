@@ -1,0 +1,748 @@
+[gd_scene load_steps=18 format=3 uid="uid://c5mh6cwau3ovp"]
+
+[ext_resource type="Texture2D" uid="uid://bi773tm2rime3" path="res://objects/icons/Bomb.svg" id="1_28cpb"]
+[ext_resource type="Texture2D" uid="uid://c53jk2s1shndk" path="res://objects/icons/IncreaseCash.svg" id="1_f08a0"]
+[ext_resource type="Script" path="res://scenes/GUI.gd" id="1_ib3g1"]
+[ext_resource type="Texture2D" uid="uid://daoodl1ata210" path="res://objects/icons/money-stack_black.svg" id="1_mdcn8"]
+[ext_resource type="Texture2D" uid="uid://bce41fnncrxs5" path="res://objects/icons/ticket.svg" id="2_ffxvy"]
+[ext_resource type="Texture2D" uid="uid://bsxvayuw7q7qj" path="res://objects/icons/FullHealth.svg" id="3_atyx3"]
+[ext_resource type="Texture2D" uid="uid://df81rcoc3b5m4" path="res://objects/icons/IncreaseHealth.svg" id="4_jpq3s"]
+[ext_resource type="Texture2D" uid="uid://b506utyjuu1bs" path="res://objects/icons/IncreaseRange.svg" id="5_i85wh"]
+[ext_resource type="Texture2D" uid="uid://nt8xcdbxjeki" path="res://objects/icons/IncreaseDamage.svg" id="7_7v3v3"]
+[ext_resource type="PackedScene" uid="uid://cw5wsrkjxk03s" path="res://scenes/joy_stick.tscn" id="9_a7go6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6wagl"]
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.301961)
+shadow_size = 1
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vca0"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_58p4e"]
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.32549)
+shadow_size = 1
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fiwen"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ivqhi"]
+bg_color = Color(0, 0, 0, 0.482353)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xliun"]
+bg_color = Color(0, 0, 0, 0.670588)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v58gu"]
+bg_color = Color(1, 1, 1, 0.176471)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ib3g1")
+
+[node name="CashBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -117.5
+offset_top = 20.0
+offset_right = 117.5
+offset_bottom = 109.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6wagl")
+
+[node name="Panel" type="Panel" parent="CashBox"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 13.5
+offset_top = -30.5
+offset_right = 53.5
+offset_bottom = 9.5
+grow_vertical = 2
+scale = Vector2(1.52, 1.52)
+theme_override_styles/panel = SubResource("StyleBoxFlat_5vca0")
+
+[node name="TextureRect" type="TextureRect" parent="CashBox/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mdcn8")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CashBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.0
+offset_top = -11.5
+offset_right = 13.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Cash:"
+
+[node name="CashValue" type="Label" parent="CashBox"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 23.5
+offset_top = -11.5
+offset_right = 104.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FullHealth" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -171.0
+offset_top = 35.0
+offset_right = -25.0
+offset_bottom = 108.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_58p4e")
+
+[node name="Panel" type="Panel" parent="FullHealth"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -22.5
+offset_right = -11.0
+offset_bottom = 22.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fiwen")
+
+[node name="FullHealth" type="Button" parent="FullHealth/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_ivqhi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xliun")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v58gu")
+
+[node name="TextureRect" type="TextureRect" parent="FullHealth/Panel/FullHealth"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_atyx3")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="FullHealth"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -62.0
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 33.0
+grow_horizontal = 2
+text = "Full Heal"
+horizontal_alignment = 1
+
+[node name="FullHealthValue" type="Label" parent="FullHealth"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -0.5
+offset_right = -5.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="HealthBarPlus" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -171.0
+offset_top = 143.0
+offset_right = -25.0
+offset_bottom = 216.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_58p4e")
+
+[node name="Panel" type="Panel" parent="HealthBarPlus"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -22.5
+offset_right = -11.0
+offset_bottom = 22.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fiwen")
+
+[node name="HealthPlus" type="Button" parent="HealthBarPlus/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_ivqhi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xliun")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v58gu")
+
+[node name="TextureRect" type="TextureRect" parent="HealthBarPlus/Panel/HealthPlus"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_jpq3s")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="HealthBarPlus"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -62.0
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 33.0
+grow_horizontal = 2
+text = "Health+"
+horizontal_alignment = 1
+
+[node name="HealthPlusValue" type="Label" parent="HealthBarPlus"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -0.5
+offset_right = -5.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="RangePlus" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -171.0
+offset_top = 251.0
+offset_right = -25.0
+offset_bottom = 324.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_58p4e")
+
+[node name="Panel" type="Panel" parent="RangePlus"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -22.5
+offset_right = -11.0
+offset_bottom = 22.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fiwen")
+
+[node name="RangePlus" type="Button" parent="RangePlus/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_ivqhi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xliun")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v58gu")
+
+[node name="TextureRect" type="TextureRect" parent="RangePlus/Panel/RangePlus"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_i85wh")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="RangePlus"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -62.0
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 33.0
+grow_horizontal = 2
+text = "Range+"
+horizontal_alignment = 1
+
+[node name="RangePlusValue" type="Label" parent="RangePlus"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -0.5
+offset_right = -5.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="DamagePlus" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -171.0
+offset_top = 359.0
+offset_right = -25.0
+offset_bottom = 432.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_58p4e")
+
+[node name="Panel" type="Panel" parent="DamagePlus"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -22.5
+offset_right = -11.0
+offset_bottom = 22.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fiwen")
+
+[node name="DamagePlus" type="Button" parent="DamagePlus/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_ivqhi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xliun")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v58gu")
+
+[node name="TextureRect" type="TextureRect" parent="DamagePlus/Panel/DamagePlus"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_7v3v3")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="DamagePlus"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -62.0
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 33.0
+grow_horizontal = 2
+text = "Damage+"
+horizontal_alignment = 1
+
+[node name="DamagePlusValue" type="Label" parent="DamagePlus"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -0.5
+offset_right = -5.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="Bomb" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -171.0
+offset_top = 467.0
+offset_right = -25.0
+offset_bottom = 540.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_58p4e")
+
+[node name="Panel" type="Panel" parent="Bomb"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -22.5
+offset_right = -11.0
+offset_bottom = 22.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fiwen")
+
+[node name="Bomb" type="Button" parent="Bomb/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_ivqhi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xliun")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v58gu")
+
+[node name="TextureRect" type="TextureRect" parent="Bomb/Panel/Bomb"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_28cpb")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Bomb"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -62.0
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 33.0
+grow_horizontal = 2
+text = "Bomb"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Bomb"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -0.5
+offset_right = -5.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="CashPlus" type="Panel" parent="."]
+layout_mode = 1
+offset_left = 25.0
+offset_top = 35.0
+offset_right = 171.0
+offset_bottom = 108.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_58p4e")
+
+[node name="Panel" type="Panel" parent="CashPlus"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -22.5
+offset_right = -11.0
+offset_bottom = 22.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fiwen")
+
+[node name="CashPlus" type="Button" parent="CashPlus/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_ivqhi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xliun")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v58gu")
+
+[node name="TextureRect" type="TextureRect" parent="CashPlus/Panel/CashPlus"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_f08a0")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CashPlus"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -62.0
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 33.0
+grow_horizontal = 2
+text = "cash+"
+horizontal_alignment = 1
+
+[node name="CashPlusValue" type="Label" parent="CashPlus"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -0.5
+offset_right = -5.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="Discount" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+offset_left = 25.0
+offset_top = 145.0
+offset_right = 171.0
+offset_bottom = 218.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_58p4e")
+
+[node name="Panel" type="Panel" parent="Discount"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -22.5
+offset_right = -11.0
+offset_bottom = 22.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fiwen")
+
+[node name="Button" type="Button" parent="Discount/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_ivqhi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xliun")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v58gu")
+
+[node name="TextureRect" type="TextureRect" parent="Discount/Panel/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ffxvy")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Discount"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -62.0
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 33.0
+grow_horizontal = 2
+text = "Discount"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Discount"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -0.5
+offset_right = -5.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -228.0
+offset_right = 730.0
+offset_bottom = 492.0
+grow_vertical = 0
+scale = Vector2(0.3, 0.3)
+
+[node name="JoyStick" parent="PanelContainer" instance=ExtResource("9_a7go6")]
+unique_name_in_owner = true
+position = Vector2(360, 360)
+
+[connection signal="pressed" from="FullHealth/Panel/FullHealth" to="." method="_on_full_health_pressed"]
+[connection signal="pressed" from="HealthBarPlus/Panel/HealthPlus" to="." method="_on_health_plus_pressed"]
+[connection signal="pressed" from="RangePlus/Panel/RangePlus" to="." method="_on_range_plus_pressed"]
+[connection signal="pressed" from="DamagePlus/Panel/DamagePlus" to="." method="_on_damage_plus_pressed"]
+[connection signal="pressed" from="Bomb/Panel/Bomb" to="." method="_on_bomb_pressed"]
+[connection signal="pressed" from="CashPlus/Panel/CashPlus" to="." method="_on_cash_plus_pressed"]

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 676.74 595.71">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Aharoni-Bold, Aharoni;
+        font-size: 109.33px;
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #00b894;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #00b894;
+        stroke-miterlimit: 10;
+        stroke-width: 21px;
+      }
+
+      .cls-4 {
+        fill: #55efc4;
+      }
+
+      .cls-4, .cls-2 {
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path class="cls-2" d="M83.74,178.54h541.18c28.6,0,51.82,23.22,51.82,51.82v121.02c0,28.6-23.22,51.82-51.82,51.82H83.74v-224.66h0Z"/>
+      <path class="cls-4" d="M0,178.54h541.18c28.6,0,51.82,23.22,51.82,51.82v121.02c0,28.6-23.22,51.82-51.82,51.82H0v-224.66h0Z"/>
+      <g>
+        <line class="cls-3" x1="3.21" y1="290.87" x2="555.61" y2="290.87"/>
+        <path class="cls-2" d="M551.39,290.87c-10.97-10.97-16.2-32.67-16.63-47.72,15.04,20.21,34.59,37.84,58.24,47.72-23.65,9.46-42.34,28.16-58.24,47.72,1.29-16.12,5.23-35.68,16.63-47.72Z"/>
+      </g>
+      <text class="cls-1" transform="translate(41.14 91.12)"><tspan x="0" y="0">Increase</tspan></text>
+      <text class="cls-1" transform="translate(41.14 568.06)"><tspan x="0" y="0">Health bar</tspan></text>
+    </g>
+  </g>
+</svg>

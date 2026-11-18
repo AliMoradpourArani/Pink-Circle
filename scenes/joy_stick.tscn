@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://cw5wsrkjxk03s"]
+
+[ext_resource type="Texture2D" uid="uid://4nqbvd15o62k" path="res://objects/joystick/Asset 27.svg" id="1_7wr0q"]
+[ext_resource type="Script" path="res://scenes/joy_stick.gd" id="1_n1p4k"]
+[ext_resource type="Texture2D" uid="uid://c8bhlkx5hpe7" path="res://objects/joystick/Asset 26.svg" id="2_2r5m1"]
+[ext_resource type="Script" path="res://scenes/JoyButton.gd" id="4_qrs74"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e8dmx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lcag0"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+
+[node name="JoyStick" type="Node2D"]
+script = ExtResource("1_n1p4k")
+
+[node name="JoyBar" type="Sprite2D" parent="."]
+texture = ExtResource("1_7wr0q")
+
+[node name="JoyButton" type="Sprite2D" parent="."]
+texture = ExtResource("2_2r5m1")
+script = ExtResource("4_qrs74")
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -372.0
+offset_top = -372.0
+offset_right = 364.0
+offset_bottom = 364.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_e8dmx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lcag0")
+
+[connection signal="button_down" from="Button" to="JoyButton" method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="JoyButton" method="_on_button_button_up"]
